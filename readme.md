@@ -1,6 +1,8 @@
 # scripts
 a collection of scripts
 
+put this repo in `~/Documents` for scripts to run correctly
+
 ## elastic stack download scripts
 
 ### downloading either kibana or elasticsearch will download both
@@ -17,6 +19,8 @@ a collection of scripts
 
 ## macos
 
+setup mac with software, aliases, tools and extensions
+
 ### first run
 
 ```
@@ -25,7 +29,7 @@ a collection of scripts
 
 ### updates
 
-the first run will setup an alias called `mac`
+the first run will also setup an alias called `mac` to run from anywhere
 
 ```
 mac
