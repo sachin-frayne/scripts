@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-LIB=$(echo ~/Documents/setup-scripts/bin/mac)
+LIB=$(echo ~/Documents/scripts/bin/mac)
 
 brew_install () {
     brew list $1  > /dev/null || brew install $1
