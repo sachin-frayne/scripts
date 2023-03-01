@@ -5,16 +5,16 @@ set -euo pipefail
 LIB=$(echo ~/Documents/scripts/bin/mac)
 
 brew_install () {
-    brew list $1  > /dev/null || brew install $1
+    if brew ls --versions "$1" > /dev/null; then brew upgrade "$1" 2> /dev/null; else brew install "$1"; fi 
 }
 
 brew_install_cask () {
-    brew list $1  > /dev/null || brew install --cask $1
+    if brew ls --versions --cask "$1" > /dev/null; then brew upgrade --cask "$1" 2> /dev/null; else brew install --cask "$1"; fi
 }
 
 for F in $LIB/*
 do
-  echo "Check for $(echo $F | sed 's|'$LIB'/bin/||g' | sed 's|\.sh||g')" 
+  echo "Check for $(echo $F | sed 's|'$LIB'/||g' | sed 's|\.sh||g')" 
   source $F
 done
 
