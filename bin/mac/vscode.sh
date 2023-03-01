@@ -14,13 +14,12 @@ vscode_install_extension () {
 #code --install-extension esbenp.prettier-vscode
 #code --install-extension formulahendry.docker-explorer
 #code --install-extension GrapeCity.gc-excelviewer
-#code --install-extension ms-azuretools.vscode-docker
 #code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 #code --install-extension ria.elastic
 #code --install-extension tomoki1207.pdf
+vscode_install_extension humao.rest-client
 vscode_install_extension ms-azuretools.vscode-docker
 vscode_install_extension yzhang.markdown-all-in-one
-vscode_install_extension humao.rest-client
 
 tee ~/Library/Application\ Support/Code/User/snippets/bash-file-header.code-snippets <<-'EOF' >/dev/null
 {
