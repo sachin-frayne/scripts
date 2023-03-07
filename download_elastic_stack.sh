@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 POSITIONAL_ARGS=()
 
 function help {
@@ -32,7 +34,7 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
-    -h)
+    -h|--help)
       help
       exit 0
       ;;
