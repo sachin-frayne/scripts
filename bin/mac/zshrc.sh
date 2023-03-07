@@ -70,14 +70,15 @@ alias tailf='tail -f'
 alias tunnel_reset='sudo ifconfig en1 down; sudo route flush; sudo ifconfig en1 up'
 
 function clean_files () {
-    FILES=($(find ~/Desktop/ -mindepth 1))
-    FILES+=($(find ~/Downloads/ -mindepth 1))
-    FILES+=($(find ~/.Trash/ -mindepth 1))
+    IFS=$'\n'
+    FILES=($(find ~/Desktop -mindepth 1))
+    FILES+=($(find ~/Downloads -mindepth 1))
+    FILES+=($(find ~/.Trash -mindepth 1))
     if [ ! -z "$FILES" ]
     then
         for F in "${FILES[@]}"
         do
-            rm $F
+            rm -r $F
         done
     fi
 }
