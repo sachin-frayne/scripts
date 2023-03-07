@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 function help {
   echo "
 SYNOPSIS
@@ -19,7 +21,7 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
-    -h)
+    -h|--help)
       help
       exit 0
       ;;
