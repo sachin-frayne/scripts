@@ -17,6 +17,7 @@ vscode_install_extension () {
 #code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 #code --install-extension ria.elastic
 #code --install-extension tomoki1207.pdf
+code --install-extension ms-python.python
 vscode_install_extension humao.rest-client
 vscode_install_extension ms-azuretools.vscode-docker
 vscode_install_extension yzhang.markdown-all-in-one
